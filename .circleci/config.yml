@@ -15,7 +15,13 @@ jobs:
       - restore_cache:
           key: v1-jars-{{ checksum "project.clj" }}
 
-      - run: lein test-all
+      - run:
+          name: loop
+          command: | 
+            for number in {1..1000}
+            do
+              echo "$number "
+            done
 
       - save_cache:
           key: v1-jars-{{ checksum "project.clj" }}
