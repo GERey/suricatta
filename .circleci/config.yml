@@ -20,6 +20,7 @@ jobs:
           command: | 
             for number in {1..1000}
             do
+              sleep 1
               echo "$number "
             done
 
