@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    parallel: 1000
     docker:
       - image: clojure:lein-2.7.1
       - image: postgres:9.3-alpine
